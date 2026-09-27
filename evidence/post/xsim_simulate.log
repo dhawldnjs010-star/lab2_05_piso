@@ -1,0 +1,5 @@
+Time resolution is 1 ps
+LAB2_PASS piso4 checks=114
+$finish called at time : 976 ns : File "C:/Users/djawl/lab2_05_piso/sim/tb_piso4.sv" Line 19
+The current simulation has finished. Please use 'restart' to begin a new simulation.
+$finish called at time : 976 ns : File "C:/Users/djawl/lab2_05_piso/sim/tb_piso4.sv" Line 19

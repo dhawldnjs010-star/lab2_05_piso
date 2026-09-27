@@ -1,0 +1,264 @@
+
+*** Running vivado
+    with args -log lab2_piso.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source lab2_piso.tcl
+
+
+INFO: [Common 17-3922] A valid Vivado Design Suite BASIC license has been detected. Your current license is active and will expire on 13-sep-2027.
+#-----------------------------------------------------------
+# Vivado v2026.1 (64-bit)
+# SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+# IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+# SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+# Start of session at: Mon Sep 21 14:50:59 2026
+# Process ID         : 40856
+# Current directory  : C:/Users/djawl/lab2_05_piso/vivado/piso.runs/synth_1
+# Command line       : vivado.exe -log lab2_piso.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source lab2_piso.tcl
+# Log file           : C:/Users/djawl/lab2_05_piso/vivado/piso.runs/synth_1/lab2_piso.vds
+# Journal file       : C:/Users/djawl/lab2_05_piso/vivado/piso.runs/synth_1\vivado.jou
+# Running On         : SangHyeok
+# Platform           : Windows 11
+# Operating System   : 26200
+# Processor Detail   : Intel(R) Core(TM) 3 100U
+# CPU Frequency      : 2496 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 8
+# Host memory        : 8258 MB
+# Swap memory        : 21103 MB
+# Total Virtual      : 29361 MB
+# Available Virtual  : 10409 MB
+#-----------------------------------------------------------
+
+****** Vivado v2026.1 (64-bit)
+  **** SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+  **** IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+  **** SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+  **** Start of session at: Mon Sep 21 14:50:59 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source lab2_piso.tcl -notrace
+create_project: Time (s): cpu = 00:00:25 ; elapsed = 00:00:19 . Memory (MB): peak = 579.211 ; gain = 267.195
+Command: synth_design -top lab2_piso -part xc7s75fgga484-1
+Starting synth_design
+Attempting to get a license for feature 'Vivado_Synthesis' and/or device 'xc7s75'
+INFO: [Common 17-349] Got license for feature 'Vivado_Synthesis' and/or device 'xc7s75'
+INFO: [Device 21-403] Loading part xc7s75fgga484-1
+INFO: [Designutils 20-5008] Incremental synthesis strategy default
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 23700
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 1330.871 ; gain = 578.781
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'lab2_piso' [C:/Users/djawl/lab2_05_piso/src/lab2_piso.v:4]
+INFO: [Synth 8-6157] synthesizing module 'input_frontend' [C:/Users/djawl/lab2_05_piso/src/input_frontend.v:4]
+	Parameter STABLE_CYCLES bound to: 20 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'input_frontend' (0#1) [C:/Users/djawl/lab2_05_piso/src/input_frontend.v:4]
+INFO: [Synth 8-6157] synthesizing module 'piso4' [C:/Users/djawl/lab2_05_piso/src/piso4.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'piso4' (0#1) [C:/Users/djawl/lab2_05_piso/src/piso4.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'lab2_piso' (0#1) [C:/Users/djawl/lab2_05_piso/src/lab2_piso.v:4]
+WARNING: [Synth 8-3917] design lab2_piso has port led[3] driven by constant 0
+WARNING: [Synth 8-3917] design lab2_piso has port led[2] driven by constant 0
+WARNING: [Synth 8-3917] design lab2_piso has port led[1] driven by constant 0
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1449.414 ; gain = 697.324
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1449.414 ; gain = 697.324
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1449.414 ; gain = 697.324
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1449.414 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/djawl/lab2_05_piso/constraints/lab2_piso.xdc]
+Finished Parsing XDC File [C:/Users/djawl/lab2_05_piso/constraints/lab2_piso.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/djawl/lab2_05_piso/constraints/lab2_piso.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/lab2_piso_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/lab2_piso_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1518.816 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1519.184 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:35 ; elapsed = 00:00:40 . Memory (MB): peak = 1519.184 ; gain = 767.094
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s75fgga484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:35 ; elapsed = 00:00:40 . Memory (MB): peak = 1519.184 ; gain = 767.094
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:40 . Memory (MB): peak = 1519.184 ; gain = 767.094
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:35 ; elapsed = 00:00:41 . Memory (MB): peak = 1519.184 ; gain = 767.094
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    5 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input    5 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 140 (col length:80)
+BRAMs: 180 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3917] design lab2_piso has port led[3] driven by constant 0
+WARNING: [Synth 8-3917] design lab2_piso has port led[2] driven by constant 0
+WARNING: [Synth 8-3917] design lab2_piso has port led[1] driven by constant 0
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:47 . Memory (MB): peak = 1533.836 ; gain = 781.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-681] value '1000000000.0ps' out of range, cropping to '214748368.0ps' [C:/Users/djawl/lab2_05_piso/constraints/lab2_piso.xdc:41]
+WARNING: [Synth 8-681] value '500000000.0ps' out of range, cropping to '214748368.0ps' [C:/Users/djawl/lab2_05_piso/constraints/lab2_piso.xdc:41]
+WARNING: [Synth 8-681] value '1000000000.0ps' out of range, cropping to '214748368.0ps' [C:/Users/djawl/lab2_05_piso/constraints/lab2_piso.xdc:41]
+WARNING: [Synth 8-681] value '500000000.0ps' out of range, cropping to '214748368.0ps' [C:/Users/djawl/lab2_05_piso/constraints/lab2_piso.xdc:41]
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:52 ; elapsed = 00:01:01 . Memory (MB): peak = 1678.762 ; gain = 926.672
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:52 ; elapsed = 00:01:01 . Memory (MB): peak = 1678.910 ; gain = 926.820
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:52 ; elapsed = 00:01:01 . Memory (MB): peak = 1689.000 ; gain = 936.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:03 ; elapsed = 00:01:12 . Memory (MB): peak = 1964.020 ; gain = 1211.930
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:03 ; elapsed = 00:01:12 . Memory (MB): peak = 1964.020 ; gain = 1211.930
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:03 ; elapsed = 00:01:12 . Memory (MB): peak = 1964.020 ; gain = 1211.930
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:03 ; elapsed = 00:01:12 . Memory (MB): peak = 1964.020 ; gain = 1211.930
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:03 ; elapsed = 00:01:12 . Memory (MB): peak = 1964.020 ; gain = 1211.930
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:03 ; elapsed = 00:01:12 . Memory (MB): peak = 1964.020 ; gain = 1211.930
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |BUFG |     1|
+|2     |LUT2 |     4|
+|3     |LUT3 |     2|
+|4     |LUT5 |     2|
+|5     |LUT6 |     6|
+|6     |FDCE |    25|
+|7     |FDPE |     2|
+|8     |FDRE |     4|
+|9     |IBUF |    11|
+|10    |OBUF |     8|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:03 ; elapsed = 00:01:12 . Memory (MB): peak = 1964.020 ; gain = 1211.930
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:43 ; elapsed = 00:01:07 . Memory (MB): peak = 1964.020 ; gain = 1142.160
+Synthesis Optimization Complete : Time (s): cpu = 00:01:03 ; elapsed = 00:01:12 . Memory (MB): peak = 1964.020 ; gain = 1211.930
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1973.180 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1976.859 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 3d6fce16
+INFO: [Common 17-83] Releasing license: Vivado_Synthesis
+20 Infos, 10 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:11 ; elapsed = 00:01:26 . Memory (MB): peak = 1976.859 ; gain = 1397.648
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1976.859 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/djawl/lab2_05_piso/vivado/piso.runs/synth_1/lab2_piso.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file lab2_piso_utilization_synth.rpt -pb lab2_piso_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Sep 21 14:52:56 2026...
